@@ -25,7 +25,7 @@ public class StudentDetailsController {
         return repository.save(newStudentDetails);
     }
     @PutMapping("/StudentDetails/{id}")
-    StudentDetails replaceEmployee(@RequestBody StudentDetails newStudentDetails, @PathVariable Long id) {
+    StudentDetails replaceStudentDetails(@RequestBody StudentDetails newStudentDetails, @PathVariable Long id) {
 
         return repository.findById(id)
                 .map(StudentDetails -> {
